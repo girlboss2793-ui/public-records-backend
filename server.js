@@ -41,6 +41,12 @@ app.get('/inmate', (req, res) => {
     type: "inmate",
     message: "Inmate records endpoint is working"
   });
+});// Sex offender endpoint
+app.get('/sexoffender', (req, res) => {
+  res.json({
+    type: "sexoffender",
+    message: "Sex offender records endpoint is working"
+  });
 });
 // Start server
 app.listen(PORT, () => {
