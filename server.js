@@ -1,5 +1,9 @@
 const express = require('express');
-const app = express();
+const app = express();const courtService = require('./courtService');
+const propertyService = require('./propertyService');
+const businessService = require('./businessService');
+const inmateService = require('./inmateService');
+const sexOffenderService = require('./sexOffenderService');
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
