@@ -29,6 +29,12 @@ app.get('/property', (req, res) => {
     type: "property",
     message: "Property records endpoint is working"
   });
+});// Business endpoint
+app.get('/business', (req, res) => {
+  res.json({
+    type: "business",
+    message: "Business records endpoint is working"
+  });
 });
 // Start server
 app.listen(PORT, () => {
