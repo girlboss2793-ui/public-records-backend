@@ -35,6 +35,12 @@ app.get('/business', (req, res) => {
     type: "business",
     message: "Business records endpoint is working"
   });
+});// Inmate endpoint
+app.get('/inmate', (req, res) => {
+  res.json({
+    type: "inmate",
+    message: "Inmate records endpoint is working"
+  });
 });
 // Start server
 app.listen(PORT, () => {
