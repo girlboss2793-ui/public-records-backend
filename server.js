@@ -13,7 +13,11 @@ app.get('/', (req, res) => {
 app.get('/test', (req, res) => {
   res.json({ status: "OK", time: new Date().toISOString() });
 });
-
+// Search endpoint
+app.get('/search', (req, res) => {
+  const query = req.query.q || "";
+  res.json({ message: `You searched for: ${query}` });
+});
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
