@@ -23,6 +23,12 @@ app.get('/court', (req, res) => {
     type: "court",
     message: "Court records endpoint is working"
   });
+});// Property endpoint
+app.get('/property', (req, res) => {
+  res.json({
+    type: "property",
+    message: "Property records endpoint is working"
+  });
 });
 // Start server
 app.listen(PORT, () => {
