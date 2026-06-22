@@ -17,6 +17,12 @@ app.get('/test', (req, res) => {
 app.get('/search', (req, res) => {
   const query = req.query.q || "";
   res.json({ message: `You searched for: ${query}` });
+});// Court endpoint
+app.get('/court', (req, res) => {
+  res.json({
+    type: "court",
+    message: "Court records endpoint is working"
+  });
 });
 // Start server
 app.listen(PORT, () => {
