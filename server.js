@@ -22,12 +22,18 @@ app.get('/search', (req, res) => {
   const query = req.query.q || "";
   res.json({ message: `You searched for: ${query}` });
 });// Court endpoint
-app.get('/court', (req, res) => {
+// Court endpoint (real service)
+app.get('/court', async (req, res) => {
+  const name = req.query.name || "";
+  const state = req.query.state || "";
+
+  const results = await courtService.lookup(name, state);
+
   res.json({
-    type: "court",
-    message: "Court records endpoint is working"
+    success: true,
+    data: results
   });
-});// Property endpoint
+}); // Property endpoint
 app.get('/property', (req, res) => {
   res.json({
     type: "property",
